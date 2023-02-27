@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
 public class Reserch implements interfaces{
     ArrayList<String> result = new ArrayList<>();
     ArrayList<Node> tree;
@@ -14,8 +15,8 @@ public class Reserch implements interfaces{
     @Override
     public ArrayList<String> spend(Human p, Relationship re) {
         for (Node t : tree) {
-            if (t.p1.fio == p.fio && t.re == re) {
-                result.add(t.p2.fio);
+            if (t.getP1().getFio() == p.getFio() && t.getRe() == re) {
+                result.add(t.getP2().getFio());
             }
         }
         return result;
@@ -30,8 +31,8 @@ public class Reserch implements interfaces{
 
         for (Node t : tree) {
 
-            if (t.p1.age <= age && !resultAge.contains(t.p1.fio)) {
-                resultAge.add(t.p1.fio);
+            if (t.getP1().getAge() <= age && !resultAge.contains(t.getP1().getFio())) {
+                resultAge.add(t.getP1().getFio());
             }
         }
         in.close();
