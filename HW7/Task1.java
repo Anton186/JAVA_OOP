@@ -34,7 +34,7 @@ class InnerApp implements IWriter {
 class Writer implements IInterface {
     @Override
     public void print() {
-        System.out.println("Hello, world!");
+        System.out.println("HELLO!!!");
     }
 }
 
